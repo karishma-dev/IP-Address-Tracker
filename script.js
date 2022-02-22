@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
 
 // inInfo function to fetch the data of the ip Address/domain inputted by the user
 const ipInfo = (address = "") => {
-    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_qoJBZrBxMVeTgrJkk7P3vZIbtmb0U&ipAddress=${address}`)
+    fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_qoJBZrBxMVeTgrJkk7P3vZIbtmb0U&domain=${address}`)
     .then(res => res.json())
     .then(data => {
         let lat = data.location.lat;
